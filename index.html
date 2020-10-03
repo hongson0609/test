@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Resume Website Template </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ---------------container--------------- -->
+    <div class="container">
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="">About Me</a></li>
+                    <li><a href="">Skills</a></li>
+                    <li><a href="">Experiments</a></li>
+                    <li><a href="">Contact</a></li>
+              </ul>
+            </nav>
+            <img src="img/menu.png" class="menu-icon">
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="text-box">
+                <h3>Hi, My name is Sơn</h3>
+                <h1>Nice to meet you. Welcome to my web CV</h1>
+                </div>
+            </div>
+            <div class="col">
+                <div class="gallery-box">
+                    <img src="img/avatar.jpg" id="gallery">
+                    <ul>
+                        <li class="btn">01</li>
+                        <li class="btn active">02</li>
+                        <li class="btn">03</li>
+                     
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+     <script>
+        var btn = document.getElementsByClassName("btn")
+        var gallery = document.getElementById("gallery");
+        
+        var images = new Array (
+            "img/avatar1.jpg",
+            "img/avatar2.jpg",
+            "img/avatar3.jpg",
+            "img/avatar3.jpg",
+            
+        );
+
+        for(let i = 0; i < btn.length; i++){
+            btn[i].onclick = function() {
+                gallery.src = images[i];
+                let current = document.getElementsByClassName("active");
+                current[0].classname  = current[0].classname.replace("active","");
+                this.classname += "active";
+            }
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
